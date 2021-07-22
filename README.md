@@ -46,7 +46,7 @@ The Notifier as well as Performance Insight (for KPIs) can use these data to cre
 - Installed System Apps Databus and S7 Connector
 - Installed Apps Data Service, Performance Insight and Notifier
 - Edge device is connected to PLC
-- TIA portal project for filling application available
+- TIA portal project loaded on PLC
 - Google Chrome (Version ≥ 72) or Firefox (Version ≥ 62)
 
 ### Used components
@@ -65,9 +65,7 @@ The Notifier as well as Performance Insight (for KPIs) can use these data to cre
 
 ### TIA Project
 
-The used TIA Portal project can be found in the [miscellenous repository](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) under the following name and is also used for several further application examples:
-
-- [tia-tank-application.7z](https://github.com/industrial-edge/miscellaneous/blob/main/tank%20application/tia-tank-application.7z)
+The used TIA Portal project can be found in the miscellaneous repository under "[tank application](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application)".
 
 ## Installation steps
 
