@@ -99,6 +99,6 @@ Activate the heartbeat to get a sound if there is a connection to the server.
 
 ![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
 
-Under "Notifications" you can see the incoming warnings and information you have created in the Edge Notifier app.
+Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
 
 ![5_6](graphics/Notifier_iOS_overview_warning.PNG)
