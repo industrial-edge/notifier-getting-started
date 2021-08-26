@@ -5,6 +5,7 @@
   - [Configure PLC Connection](#configure-plc-connection)
   - [Configure Performance Insight](#configure-performance-insight)
   - [Configure Notifier](#configure-notifier)
+  - [Configure Notifier iOS](#configure-notifier-ios)
 
 ## Configure PLC project
 
@@ -79,3 +80,23 @@ Create a new warning notification "tank empty" with the following settings:
 Create a further information notification "production started" with the following settings:
 
 ![5_2](graphics/5_2_Notifier.PNG)
+
+## Configure Notifier iOS
+
+Open the Notifier iOS app and tap "Add connection" to select a connection.
+
+![5_3](graphics/Notifier_iOS_add_connection.PNG)
+
+Select "Edge" as the connection.
+
+![5_4](graphics/Notifier_iOS_choose_connection.PNG)
+
+Enter the login data from your Edge and tap "Login" to confirm the data.
+
+![5_5](graphics/Notifier_iOS_add_connection_login_data.PNG)
+
+Under "Notifications" you can see the warning and information you have created in the Edge Notifier App.
+
+![5_6](graphics/Notifier_iOS_overview_warning.PNG)
+
+![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
