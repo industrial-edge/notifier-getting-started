@@ -83,7 +83,7 @@ Create a further information notification "production started" with the followin
 
 ## Configure Notifier iOS
 
-Open the Notifier iOS app and tap "Add connection" to select a connection.
+Open the Notifier iOS app and click "Add connection" to select a connection.
 
 ![5_3](graphics/Notifier_iOS_add_connection.PNG)
 
@@ -91,7 +91,7 @@ Select "Edge" as the connection.
 
 ![5_4](graphics/Notifier_iOS_choose_connection.PNG)
 
-Enter the login data from your Edge and tap "Login" to confirm the data.
+Enter the login data from your Edge and click "Login" to confirm the data.
 
 ![5_5](graphics/Notifier_iOS_add_connection_login_data.PNG)
 
@@ -99,6 +99,6 @@ Activate the heartbeat to get a sound if there is a connection to the server.
 
 ![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
 
-Under "Notifications" you can see the warning and information you have created in the Edge Notifier App.
+Under "Notifications" you can see the incoming warnings and information you have created in the Edge Notifier app.
 
 ![5_6](graphics/Notifier_iOS_overview_warning.PNG)
