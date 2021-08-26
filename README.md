@@ -59,6 +59,7 @@ The Notifier as well as Performance Insight (for KPIs) can use these data to cre
   - Data Service V1.1.1
   - Performance Insight V1.2.1
   - Notifier V1.2.0
+  - Notifier iOS V1.0.4
 - Industrial Edge Device V 1.2.0-56
 - TIA Portal V16
 - PLC: CPU 1511 FW 2.8.3
@@ -75,6 +76,7 @@ You can find the further information about the following steps in the [docs](doc
 - Configure PLC Connection (Databus, S7 Connector, Data Service)
 - Configure Performance Insight
 - Configure Notifier
+- Configure Notifier iOS
 
 ## Usage
 
