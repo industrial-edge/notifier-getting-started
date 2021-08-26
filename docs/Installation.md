@@ -95,8 +95,10 @@ Enter the login data from your Edge and tap "Login" to confirm the data.
 
 ![5_5](graphics/Notifier_iOS_add_connection_login_data.PNG)
 
+Activate the heartbeat to get a sound if there is a connection to the server.
+
+![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
+
 Under "Notifications" you can see the warning and information you have created in the Edge Notifier App.
 
 ![5_6](graphics/Notifier_iOS_overview_warning.PNG)
-
-![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
