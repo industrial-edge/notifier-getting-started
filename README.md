@@ -51,11 +51,11 @@ The Notifier as well as Performance Insight (for KPIs) can use these data to cre
 
 ### Used components
 
-- Industrial Edge Management V1.2.0-36 / V1.2.14
+- Industrial Edge Management V1.2.0-36 / V1.2.16
   - IE Databus V1.2.16
-  - IE Databus Configurator V1.2.23
+  - IE Databus Configurator V1.2.29
   - S7 Connector V1.2.26
-  - S7 Connector Configurator V1.2.32
+  - S7 Connector Configurator V1.2.38
   - Data Service V1.1.1
   - Performance Insight V1.2.1
   - Notifier V1.2.0
