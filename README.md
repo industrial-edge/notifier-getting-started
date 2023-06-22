@@ -1,6 +1,6 @@
-# Notifier application example
+# Notifier
 
-This example shows how to use the Industrial Edge App "Notifier" to create notifications in case of an event.
+This guide shows how to use the Industrial Edge app "Notifier" to create notifications in case of an event.
 
 - [Notifier application example](#notifier-application-example)
   - [Description](#description)
@@ -20,8 +20,9 @@ This example shows how to use the Industrial Edge App "Notifier" to create notif
 
 ### Overview
 
-This document describes how to manage globally available notifications generated in case of an event.
-These events can be watched by a mobile phone or a smartwatch.
+The Notifier (running on the IED) offers globally accessible notifications that are generated in case of an event. For this purpose, the app monitors the variables stored in the Data Service according to the notification rules you have configured.
+
+If the Notifier has some connected clients (mobile devices with Notifier Mobile app running), it sends push notifications to the clients in case of an event. Thus the staff on site is informed immediately about issues within the facility, which reduces reaction times and downtimes. Furthermore the staff is able to see, who took over which responsibility.
 
 ![0](docs/graphics/0_Overview.PNG)
 
