@@ -40,7 +40,7 @@ A filling process is monitored by the Industrial Edge system. This example reads
 - Warning: High energy consumption
 - Alert: Error within production
 
-In case of these events, notifications are generated and send to the mobile device with installed Notifier app.
+In case of these events, notifications are generated and send to a mobile device (iOS) with installed Notifier app.
 
 ## Requirements
 
@@ -66,8 +66,6 @@ In case of these events, notifications are generated and send to the mobile devi
   - Data Service V1.7.0
   - Notifier V1.15.0
 - Industrial Edge Device V1.8.0-6
-- TIA Portal V16
-- PLC: CPU 1511 FW 2.8.3
 - SIMATIC Notifier mobile app for iOS V1.0.5
 
 ### TIA Project
