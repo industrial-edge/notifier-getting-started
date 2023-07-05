@@ -1,87 +1,92 @@
 # Configuration
 
 - [Configuration](#configuration)
-  - [Configure PLC project](#configure-plc-project)
   - [Configure PLC Connection](#configure-plc-connection)
-  - [Configure Performance Insight](#configure-performance-insight)
+    - [Databus](#databus)
+    - [OPC UA Connector](#opc-ua-connector)
+  - [Configure Data Service](#configure-data-service)
   - [Configure Notifier](#configure-notifier)
-  - [Configure Notifier iOS](#configure-notifier-ios)
-
-## Configure PLC project
-
-1) Open TIA portal and open the project containing the filling application
-2) Download the PLC program to the PLC and set the PLC into RUN
-3) Open the HMI to control the filling application
+  - [Configure Notifier mobile app](#configure-notifier-mobile-app)
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
-The S7 Connector sends the data to the Databus, where the Data Service app can collect what is needed for the notification rules.
-In order to build this infrastructure, these apps must be configured properly:
+To read data from the PLC and provide the data, we will use the OPC UA Connector to establish a connection with the PLC via OPC UA. The Connector transfers the data to the Databus.
 
-- IE Databus
-- S7 Connector
-- Data Service
+In order to build this infrastructure, these apps must be running and configured properly:
 
-Please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
+- Databus
+- OPC UA Connector
 
-Finally the configurations should look like this:
+### Databus
 
-**IE Databus**
+Go to the IEM App and open the Databus Configurator.
+
+Create an user and add a suitable topic to receive the data from the connector and deploy the configuration.
 
 ![1](graphics/1_Databus.PNG)
 
-**S7 Connector**
+### OPC UA Connector
 
-![2](graphics/2_S7_Connector.PNG)
+Go to the IEM App and open the OPC UA Connector Configurator.
 
-**Data Service**
+Add your PLC as data source and deploy the configuration.
+
+![2](graphics/2_Connector.PNG)
+
+## Configure Data Service
+
+The Data Service can be enabled to receive the PLC data, that was transferred by the connector. The user can configure all needed parameters structured by assets. These assets are then accessible within the Notifier.
+
+For detailled instructions please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
+
+Finally the Data Service configurations should look like this:
 
 ![3](graphics/3_DataService.PNG)
 
-## Configure Performance Insight
-
-In order to create a KPI and assign appropriate variables, we need to use the Performance Insight app.
-Limit values and activate notifications can be configured here, which will be forwarded to the Notifier.
-
-Open the user interface of the Performance Insight app on your IE Device. On the left bar navigate to Configuration > KPI types and click "New KPI type".
-Create a new KPI "production quality" with the following formula (`<faulty>` and `<produced>` are operands)
-
-`100 - (<faulty> / <produced> * 100%)`
-
-![4_1](graphics/4_1_PerformanceInsight.png)
-
-Navigate to My Plant > filling application > Parameter (drop down menu on the top of the heading).
-
-![4_2](graphics/4_2_PerformanceInsight.png)
-
-Choose 'New KPI instance' to create a new instance according to the following settings:
-
-![4_3](graphics/4_3_PerformanceInsight.png)
-
-Select the tab 'Limits' to enter the low limit for the KPI value and activate the notification option:
-
-![4_4](graphics/4_4_PerformanceInsight.png)
-
-Now a new KPI instance should be available:
-
-![4_5](graphics/4_5_PerformanceInsight.png)
-
 ## Configure Notifier
 
-In the chapter above we already created an alert notification for the KPI "production quality".
-In order to create some warning and information notifications, we now use the Notifier app.
+The asset structure, including all parameters that were created above, is now available within the Notifier. That allows the user to create the following notification rules based on these parameters:
 
-Open the user interface of the Notifier app on your IE Device. On the left bar navigate to Settings > Manage notification rules and click "Add notification rule".
-Create a new warning notification "tank empty" with the following settings:
+- Information: Production was stopped
+- Warning: High gas consumption
+- Alert: Error within production
+
+**Create an information rule**
+
+Go to the IED Web UI and launch the Notifier.
+
+On the left bar navigate to Settings > Manage notification rules.
+
+Click "Add notification rule" to create the first rule "Production was stopped" as an information.
+
+Configure the following settings and save.
 
 ![5_1](graphics/5_1_Notifier.PNG)
 
-Create a further information notification "production started" with the following settings:
+**Create a warning rule**
+
+Click "Add notification rule" to create the second rule "High gas consumption" as a warning.
+
+Configure the following settings and save.
 
 ![5_2](graphics/5_2_Notifier.PNG)
 
-## Configure Notifier iOS
+**Create an alert rule**
+
+Click "Add notification rule" to create the third rule "Error within production" as an allert.
+
+Configure the following settings and save.
+
+![5_2](graphics/5_3_Notifier.PNG)
+
+Finally the configuration should look like this:
+
+5_Notifier_Overview.PNG
+
+## Configure Notifier mobile app
+
+TODO: HIER weiter....
+
 
 Open the Notifier iOS app and click "Add connection" to select a connection.
 

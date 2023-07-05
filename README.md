@@ -37,7 +37,7 @@ If the Notifier has some connected clients (mobile devices with Notifier mobile 
 A filling process is monitored by the Industrial Edge system. This example reads data from a PLC via the OPC UA Connector. The acquired data is published to the Databus, from where the Data Service is able to collect the data. Within the Data Service, the data points of interest are created and stored. The Notifier connects to the Data Service and allows the user to create the following notification rules on basis of these parameters:
 
 - Information: Production was stopped
-- Warning: High energy consumption
+- Warning: High gas consumption
 - Alert: Error within production
 
 In case of these events, notifications are generated and send to a mobile device (iOS) with installed Notifier app.
