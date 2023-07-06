@@ -11,7 +11,8 @@
     - [Show user list](#show-user-list)
     - [Show user groups](#show-user-groups)
     - [Send notification via email](#send-notification-via-email)
-  - [Configure Notifier mobile app](#configure-notifier-mobile-app)
+  - [Connect smart devices](#connect-smart-devices)
+    - [Setup Notifier mobile app](#setup-notifier-mobile-app)
 
 ## Configure PLC Connection
 
@@ -126,8 +127,6 @@ The way of notification can be configured as push notification or email. Additio
 
 If a group contains several users, these are notified in the specified order. If one user can not accept the notification within the configured time, the notification is forwarded to the next one.
 
-![6_User_Roles_1](/docs/graphics/6_User_Roles_1.PNG)
-
 ![6_User_Roles_2](/docs/graphics/6_User_Roles_2.PNG)
 
 ![6_User_Roles_3](/docs/graphics/6_User_Roles_3.PNG)
@@ -162,31 +161,45 @@ Add at least one filter for displaying your notifications.
 
 Activate the "Email" option and save.
 
+## Connect smart devices
+
+It is also possible to receive notifications from the IED on a smart device. Therefore the SIMATIC Notifier mobile app must be installed on the smart device. The mobile app supports iOS and Androis devices (smartphones/tablets) as well as Wear OS devices (smartwatch). The app can be downloaded from the dedicated app stores.
+
+### Setup Notifier mobile app
+
+To be able to receive push notifications from the Notifier, you need to set up a connection from your smart device to the IED. Please consider the following preconditions:
+
+- the Notifier app is installed and running on the IED
+- the Notifier mobile app is installed on your smart device
+- both devices are connected to the same network (WLAN)
+- communication ports are opened (443, 51883)
+
+Open the Notifier app on your smart device. 
+
+Click "Add connection" and select "Edge" as connection type.
+
+![7_iOS_1](/docs/graphics/7_iOS_1.png)![7_iOS_2](/docs/graphics/7_iOS_2.png)
+
+Enter the login data from your Edge Device and click "Login".
+
+![7_iOS_3](/docs/graphics/7_iOS_3.png)
 
 
+HIER WEITER ---------->
 
-
-
-
-## Configure Notifier mobile app
-
-The smart device shows the notifications that were selected using the "My notifications" filter criteria.
-
-Open the Notifier iOS app and click "Add connection" to select a connection.
-
-![5_3](/docs/graphics/Notifier_iOS_add_connection.PNG)
-
-Select "Edge" as the connection.
-
-![5_4](/docs/graphics/Notifier_iOS_choose_connection.PNG)
-
-Enter the login data from your Edge and click "Login" to confirm the data.
-
-![5_5](/docs/graphics/Notifier_iOS_add_connection_login_data.PNG)
 
 Activate the heartbeat to get a sound if there is a connection to the server.
 
 ![5_7](/docs/graphics/Notifier_iOS_use_heartbeat.PNG)
+
+
+### xxx
+
+
+New notifications are shown as push notifications on your smart device and you can view and accept them directly on the smart device. Only the notifications that you can see in the Notifier app on your IED under "My notifications" are displayed on your smart device!
+
+
+
 
 Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
 

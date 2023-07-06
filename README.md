@@ -79,7 +79,7 @@ You can find the further information about the following steps in the [configura
 - [Configure PLC Connection](/docs/Installation.md#configure-plc-connection)
 - [Configure Data Service](/docs/Installation.md#configure-data-service)
 - [Configure Notifier](/docs/Installation.md#configure-notifier)
-- [Configure Notifier mobile app](/docs/Installation.md#configure-notifier-mobile-app)
+- [Connect smart devices](/docs/Installation.md#connect-smart-devices)
 
 ## Usage
 
