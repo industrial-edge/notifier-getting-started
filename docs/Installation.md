@@ -178,7 +178,7 @@ Open the Notifier app on your smart device.
 
 Click "Add connection" and select "Edge" as connection type.
 
-![7_iOS_1](/docs/graphics/7_iOS_1.png)![7_iOS_2](/docs/graphics/7_iOS_2.png)
+![7_iOS_1](/docs/graphics/7_iOS_1.png)    ![7_iOS_2](/docs/graphics/7_iOS_2.png)
 
 Enter the login data from your Edge Device and click "Login".
 
