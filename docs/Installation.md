@@ -8,6 +8,9 @@
   - [Configure Notifier](#configure-notifier)
     - [Create notification rules](#create-notification-rules)
     - [Manage 'My notifications'](#manage-my-notifications)
+    - [Show user list](#show-user-list)
+    - [Show user groups](#show-user-groups)
+    - [Send notification via email](#send-notification-via-email)
   - [Configure Notifier mobile app](#configure-notifier-mobile-app)
 
 ## Configure PLC Connection
@@ -59,7 +62,7 @@ The asset structure, including all parameters that were created above, is now av
 
 Go to the IED Web UI and launch the Notifier.
 
-On the left bar navigate to Settings > Manage notification rules.
+Navigate to Settings > Manage notification rules on the left bar.
 
 Below the asset tree, select the dedicated asset for the notification rule.
 
@@ -95,13 +98,75 @@ Navigate to Settings > Manage 'My notifications' on the left bar.
 
 Here you can create filters for displaying only your notifications, which can be selected on the "Notifications" start page.
 
-| Hint: For showing notifications on a smart device, these filters must be configured necessarily for a user. Otherwise no notifications are send to the smart device!
+> Hint: For showing notifications on a **smart device**, these filters must be configured necessarily for a user. Otherwise no notifications are send to the smart device!
 
 The filter conditions can be related to the notification type (information/wargning/alert) or the asset.
 
 For displaying all notifications, the configuration could look like this:
 
 ![6_My_Notifications](/docs/graphics/6_My_Notifications.PNG)
+
+### Show user list
+
+Navigate to Settings > User list on the left bar.
+
+Here the administrator gets an overview of currently registered users within the Notifier app. The administrator is able to edit and delete an user account.
+
+In general users are managed on the Edge Device. In the screen "My User Groups", you can enable access to the Notifier app which is installed on the Edge Device. To do this, you create groups with different authorizations and provide dedicated users access to the Notifier.
+
+![6_User_List](/docs/graphics/6_User_List.PNG)
+
+### Show user groups
+
+Navigate to Settings > User groups on the left bar.
+
+Here the administrator gets a list of user groups within the Notifier app. The administrator is able to create a new group to send notifications to a group of users.
+
+The way of notification can be configured as push notification or email. Additionally you can configure a time that may pass before an escalation is triggered and the next user is notified.
+
+If a group contains several users, these are notified in the specified order. If one user can not accept the notification within the configured time, the notification is forwarded to the next one.
+
+![6_User_Roles_1](/docs/graphics/6_User_Roles_1.PNG)
+
+![6_User_Roles_2](/docs/graphics/6_User_Roles_2.PNG)
+
+![6_User_Roles_3](/docs/graphics/6_User_Roles_3.PNG)
+
+### Send notification via email
+
+You can also send the notifications displayed under "My notifications" by email. 
+
+![6_SMTP_3](/docs/graphics/6_SMTP_3.PNG)
+
+To do so, you must first configure the SMTP settings and then enable the "Email" option in the filter settings.
+
+**Configure SMTP settings**
+
+Navigate to Settings > Configure SMTP settings on the left bar.
+
+Enter the server details and choose an option for authentication.
+
+![6_SMTP_1](/docs/graphics/6_SMTP_1.PNG)
+
+To test the configuration, click "Validate configuration" and a dedicated window opens. Click "Send Email" to receive a test email to the address configured in the "To" field.
+
+![6_SMTP_2](/docs/graphics/6_SMTP_2.PNG)
+
+![6_SMTP_4](/docs/graphics/6_SMTP_4.PNG)
+
+**Enable email option**
+
+Navigate to Settings > Manage 'My notifications' on the left bar.
+
+Add at least one filter for displaying your notifications.
+
+Activate the "Email" option and save.
+
+
+
+
+
+
 
 ## Configure Notifier mobile app
 
