@@ -6,6 +6,8 @@
     - [OPC UA Connector](#opc-ua-connector)
   - [Configure Data Service](#configure-data-service)
   - [Configure Notifier](#configure-notifier)
+    - [Create notification rules](#create-notification-rules)
+    - [Manage 'My notifications'](#manage-my-notifications)
   - [Configure Notifier mobile app](#configure-notifier-mobile-app)
 
 ## Configure PLC Connection
@@ -23,7 +25,7 @@ Go to the IEM App and open the Databus Configurator.
 
 Create an user and add a suitable topic to receive the data from the connector and deploy the configuration.
 
-![1](graphics/1_Databus.PNG)
+![1](/docs/graphics/1_Databus.PNG)
 
 ### OPC UA Connector
 
@@ -31,7 +33,7 @@ Go to the IEM App and open the OPC UA Connector Configurator.
 
 Add your PLC as data source and deploy the configuration.
 
-![2](graphics/2_Connector.PNG)
+![2](/docs/graphics/2_Connector.PNG)
 
 ## Configure Data Service
 
@@ -41,9 +43,11 @@ For detailled instructions please refer to [using the Data Service](https://gith
 
 Finally the Data Service configurations should look like this:
 
-![3](graphics/3_DataService.PNG)
+![3](/docs/graphics/3_DataService.PNG)
 
 ## Configure Notifier
+
+### Create notification rules
 
 The asset structure, including all parameters that were created above, is now available within the Notifier. That allows the user to create the following notification rules based on these parameters:
 
@@ -51,59 +55,74 @@ The asset structure, including all parameters that were created above, is now av
 - Warning: High gas consumption
 - Alert: Error within production
 
-**Create an information rule**
+**Create an ***information*** rule**
 
 Go to the IED Web UI and launch the Notifier.
 
 On the left bar navigate to Settings > Manage notification rules.
 
+Below the asset tree, select the dedicated asset for the notification rule.
+
 Click "Add notification rule" to create the first rule "Production was stopped" as an information.
 
 Configure the following settings and save.
 
-![5_1](graphics/5_1_Notifier.PNG)
+![5_1](/docs/graphics/5_1_Notifier.PNG)
 
-**Create a warning rule**
+**Create a ***warning*** rule**
 
 Click "Add notification rule" to create the second rule "High gas consumption" as a warning.
 
 Configure the following settings and save.
 
-![5_2](graphics/5_2_Notifier.PNG)
+![5_2](/docs/graphics/5_2_Notifier.PNG)
 
-**Create an alert rule**
+**Create an ***alert*** rule**
 
 Click "Add notification rule" to create the third rule "Error within production" as an allert.
 
 Configure the following settings and save.
 
-![5_2](graphics/5_3_Notifier.PNG)
+![5_2](/docs/graphics/5_3_Notifier.PNG)
 
 Finally the configuration should look like this:
 
-5_Notifier_Overview.PNG
+![5_Notifier_Overview](/docs/graphics/5_Notifier_Overview.PNG)
+
+### Manage 'My notifications'
+
+Navigate to Settings > Manage 'My notifications' on the left bar.
+
+Here you can create filters for displaying only your notifications, which can be selected on the "Notifications" start page.
+
+| Hint: For showing notifications on a smart device, these filters must be configured necessarily for a user. Otherwise no notifications are send to the smart device!
+
+The filter conditions can be related to the notification type (information/wargning/alert) or the asset.
+
+For displaying all notifications, the configuration could look like this:
+
+![6_My_Notifications](/docs/graphics/6_My_Notifications.PNG)
 
 ## Configure Notifier mobile app
 
-TODO: HIER weiter....
-
+The smart device shows the notifications that were selected using the "My notifications" filter criteria.
 
 Open the Notifier iOS app and click "Add connection" to select a connection.
 
-![5_3](graphics/Notifier_iOS_add_connection.PNG)
+![5_3](/docs/graphics/Notifier_iOS_add_connection.PNG)
 
 Select "Edge" as the connection.
 
-![5_4](graphics/Notifier_iOS_choose_connection.PNG)
+![5_4](/docs/graphics/Notifier_iOS_choose_connection.PNG)
 
 Enter the login data from your Edge and click "Login" to confirm the data.
 
-![5_5](graphics/Notifier_iOS_add_connection_login_data.PNG)
+![5_5](/docs/graphics/Notifier_iOS_add_connection_login_data.PNG)
 
 Activate the heartbeat to get a sound if there is a connection to the server.
 
-![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
+![5_7](/docs/graphics/Notifier_iOS_use_heartbeat.PNG)
 
 Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
 
-![5_6](graphics/Notifier_iOS_overview_warning.PNG)
+![5_6](/docs/graphics/Notifier_iOS_overview_warning.PNG)
