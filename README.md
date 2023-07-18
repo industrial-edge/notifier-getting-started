@@ -85,7 +85,16 @@ You can find the further information about the following steps in the [configura
 
 Once the Notifier is successfully configured and running on the IED, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The mobile device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings.
 
+
 ----------------- TODO -----------------:
+
+New notifications are shown as push notifications on your smart device and you can view and accept them directly on the smart device. Only the notifications that you can see in the Notifier app on your IED under "My notifications" are displayed on your smart device!
+
+Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
+
+![8_1_Notifier.png](/docs/graphics/8_1_Notifier.png)
+
+
 
 **Notifications**
 

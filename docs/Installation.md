@@ -7,7 +7,7 @@
   - [Configure Data Service](#configure-data-service)
   - [Configure Notifier](#configure-notifier)
     - [Create notification rules](#create-notification-rules)
-    - [Manage 'My notifications'](#manage-my-notifications)
+    - [Manage "My notifications"](#manage-my-notifications)
     - [Show user list](#show-user-list)
     - [Show user groups](#show-user-groups)
     - [Send notification via email](#send-notification-via-email)
@@ -93,9 +93,9 @@ Finally the configuration should look like this:
 
 ![5_Notifier_Overview](/docs/graphics/5_Notifier_Overview.PNG)
 
-### Manage 'My notifications'
+### Manage "My notifications"
 
-Navigate to Settings > Manage 'My notifications' on the left bar.
+Navigate to Settings > Manage "My notifications" on the left bar.
 
 Here you can create filters for displaying only your notifications, which can be selected on the "Notifications" start page.
 
@@ -155,7 +155,7 @@ To test the configuration, click "Validate configuration" and a dedicated window
 
 **Enable email option**
 
-Navigate to Settings > Manage 'My notifications' on the left bar.
+Navigate to Settings > Manage "My notifications" on the left bar.
 
 Add at least one filter for displaying your notifications.
 
@@ -174,6 +174,8 @@ To be able to receive push notifications from the Notifier, you need to set up a
 - both devices are connected to the same network (WLAN)
 - communication ports are opened (443, 51883)
 
+Here we use an iPhone with iOS operating system, the Notifier app was downloaded from the Apple app store and installed on the smartphone.
+
 Open the Notifier app on your smart device. 
 
 Click "Add connection" and select "Edge" as connection type.
@@ -184,23 +186,14 @@ Enter the login data from your Edge Device and click "Login".
 
 ![7_iOS_3](/docs/graphics/7_iOS_3.png)
 
+After successful login, activate the heartbeat settings. This prevents a disconnection from the server when the app is minimized. On Android smart devices this function is called "Keep connection".
 
-HIER WEITER ---------->
+![7_iOS_4](/docs/graphics/7_iOS_4.png)
 
+Afterwards enable push notifications to receive incoming notifications at all times.
 
-Activate the heartbeat to get a sound if there is a connection to the server.
+![7_iOS_5](/docs/graphics/7_iOS_5.png)
 
-![5_7](/docs/graphics/Notifier_iOS_use_heartbeat.PNG)
+Now the smart device is ready to receive notifications from the dedicated IED.
 
-
-### xxx
-
-
-New notifications are shown as push notifications on your smart device and you can view and accept them directly on the smart device. Only the notifications that you can see in the Notifier app on your IED under "My notifications" are displayed on your smart device!
-
-
-
-
-Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
-
-![5_6](/docs/graphics/Notifier_iOS_overview_warning.PNG)
+Please switch to the [Usage](/README.md#usage) chapter, to see how to work with the Notifier and it's dedicated mobile app.
