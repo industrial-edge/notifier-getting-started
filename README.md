@@ -108,7 +108,7 @@ By accepting a notification, you inform other users that you will take care of t
 
 To accept a notification via the Notifier app UI, click "Accept" in the list of notifications. Here you can also reset the acceptance of a notification.
 
-![8_5_Notifier_Acceptec.png](/docs/graphics/8_5_Notifier_Acceptec.png)
+![8_5_Notifier_Accepted.png](/docs/graphics/8_5_Notifier_Accepted.png)
 
 To accept a notification on the smartphone, click "Accept" in the detail view of a notification.
 
