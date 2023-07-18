@@ -116,21 +116,11 @@ To accept a notification on the smartphone, click "Accept" in the detail view of
 
 **Archive**
 
-The "Archive" view within the Notifier app UI shows the notifications that have been fixed or deleted.
+The "Archive" view within the Notifier app UI shows the notifications that have been automatically resolved or deleted.
 
+A notification is marked as "automatically resolved", when it has not been accepted by any user or the reason for triggering no longer exists.
 
-Notification automatically resolved
-A notification is marked as "Automatically resolved" and displayed in the "Archive" tab if the
-following conditions apply:
-• The notification has not been accepted by any user.
-• The reason for triggering the notification no longer exists, e.g. if the value of the variable no
-longer corresponds to the value in the notification rule.
-• A notification for a subtenant was accepted by an administrator/user of the tenant.
-("Accepted by others")
-
-
-A notification is marked as "automatically resolved" in the Archive tab, when it has not been accepted by any user or the reason for triggering no longer exists.
-
+![8_6_Notifier_Archive.png](/docs/graphics/8_6_Notifier_Archive.png)
 
 ## Documentation
 
