@@ -186,13 +186,9 @@ Enter the login data from your Edge Device and click "Login".
 
 ![7_iOS_3](/docs/graphics/7_iOS_3.png)
 
-After successful login, activate the heartbeat settings. This prevents a disconnection from the server when the app is minimized. On Android smart devices this function is called "Keep connection".
+After successful login, activate the heartbeat settings. This prevents a disconnection from the server when the app is minimized. On Android smart devices this function is called "Keep connection". Afterwards enable push notifications to receive incoming notifications at all times.
 
-![7_iOS_4](/docs/graphics/7_iOS_4.png)
-
-Afterwards enable push notifications to receive incoming notifications at all times.
-
-![7_iOS_5](/docs/graphics/7_iOS_5.png)
+![7_iOS_4](/docs/graphics/7_iOS_4.png)    ![7_iOS_5](/docs/graphics/7_iOS_5.png)
 
 Now the smart device is ready to receive notifications from the dedicated IED.
 
