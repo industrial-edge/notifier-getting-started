@@ -86,7 +86,7 @@ You can find the further information about the following steps in the [configura
 
 ## Usage
 
-Once the Notifier is successfully configured and running on the IED, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
+Once the Notifier is successfully configured and running on the IED and the Notifier mobile app is installed on a smart device, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
 
 ### Showing notifications
 
