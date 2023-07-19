@@ -35,7 +35,7 @@ Create an user and add a suitable topic to receive the data from the connector a
 
 Go to the IEM App and open the OPC UA Connector Configurator.
 
-Add your PLC as data source and deploy the configuration.
+Add your PLC as data source, add your requested tags and deploy the configuration.
 
 ![2](/docs/graphics/2_Connector.PNG)
 
@@ -45,7 +45,7 @@ The Data Service can be enabled to receive the PLC data, that was transferred by
 
 For detailled instructions please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
 
-Finally the Data Service configurations should look like this:
+To make your PLC tags available for the Notifier, add these to a Data Service asset. Finally the Data Service configurations should look like this:
 
 ![3](/docs/graphics/3_DataService.PNG)
 
@@ -87,7 +87,7 @@ Click "Add notification rule" to create the third rule "Error within production"
 
 Configure the following settings and save.
 
-![5_2](/docs/graphics/5_3_Notifier.PNG)
+![5_3](/docs/graphics/5_3_Notifier.PNG)
 
 Finally the configuration should look like this:
 
