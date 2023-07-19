@@ -135,8 +135,6 @@ If a group contains several users, these are notified in the specified order. If
 
 You can also send the notifications displayed under "My notifications" by email. 
 
-![6_SMTP_3](/docs/graphics/6_SMTP_3.PNG)
-
 To do so, you must first configure the SMTP settings and then enable the "Email" option in the filter settings.
 
 **Configure SMTP settings**

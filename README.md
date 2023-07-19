@@ -105,6 +105,10 @@ On the smartphone, a push notification is received in case of a new notification
 
 If user groups are set up in the app, the users of a group are notified of the events in the specified order. If one user can not accept the notification, it is forwarded to the next one after the configured time.
 
+You can also send the notifications displayed under "My notifications" by email, if this setting was activated in the configuration.
+
+![6_SMTP_3](/docs/graphics/6_SMTP_3.PNG)
+
 ### Accepting notifications
 
 By accepting a notification, you inform other users that you will take care of the issue.
