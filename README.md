@@ -86,7 +86,7 @@ You can find the further information about the following steps in the [configura
 
 ## Usage
 
-Once the Notifier is successfully configured and running on the IED and the Notifier mobile app is installed on a smart device, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
+Once the Notifier is successfully configured and running on the IED and (optional) the Notifier mobile app is installed on a smart device, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
 
 ### Showing notifications
 
@@ -103,7 +103,7 @@ On the smartphone, a push notification is received in case of a new notification
 
 ![8_2_App.png](/docs/graphics/8_2_App.png)
 
-If user groups are set up in the app, the users of a group are notified of the events in the specified order. If one user can not accept the notification, it is forwarded to the next one.
+If user groups are set up in the app, the users of a group are notified of the events in the specified order. If one user can not accept the notification, it is forwarded to the next one after the configured time.
 
 ### Accepting notifications
 
