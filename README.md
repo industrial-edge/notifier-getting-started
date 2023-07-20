@@ -31,7 +31,7 @@ There are three types of notifications:
 - **Warning**: Notifications of medium priority that inform the user of an important status or problem in the plant, for example, when a parameter limit has been exceeded.
 - **Information**: Information about low priority events, such as pending maintenance.
 
-If the Notifier has some connected clients (mobile devices with Notifier mobile app running), it sends push notifications to the clients in case of an event. Thus the staff on site is informed immediately about issues within the facility, which reduces reaction times and downtimes. Furthermore the staff is able to see, who took over which responsibility.
+If the Notifier has some connected clients (smart devices with Notifier app running), it sends push notifications to the clients in case of an event. Thus the staff on site is informed immediately about issues within the facility, which reduces reaction times and downtimes. Furthermore the staff is able to see, who took over which responsibility.
 
 ![0](docs/graphics/0_Overview.PNG)
 
@@ -43,7 +43,7 @@ A filling process is monitored by the Industrial Edge system. This example reads
 - Warning: High gas consumption
 - Alert: Error within production
 
-In case of these events, notifications are generated and send to a mobile device with installed Notifier app.
+In case of these events, notifications are generated and send to a smart device with installed Notifier app.
 
 ## Requirements
 
@@ -69,7 +69,7 @@ In case of these events, notifications are generated and send to a mobile device
   - Data Service V1.7.0
   - Notifier V1.15.0
 - Industrial Edge Device V1.8.0-6
-- SIMATIC Notifier mobile app for iOS V1.0.5
+- SIMATIC Notifier app for iOS V1.0.5
 
 ### TIA Project
 
@@ -86,7 +86,7 @@ You can find the further information about the following steps in the [configura
 
 ## Usage
 
-Once the Notifier is successfully configured and running on the IED and (optional) the Notifier mobile app is installed on a smart device, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
+Once the Notifier is successfully configured and running on the IED and (optional) the Notifier app is installed on a smart device, the staff is able to receive notifications in case of an event. All notifications are displayed on the Notifier start page on the IED. The smart device shows only the notifications that were selected using the 'My notifications' filter within the Notifier settings. On both sides, the users can accept the notifications.
 
 ### Showing notifications
 
