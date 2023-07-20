@@ -43,7 +43,7 @@ A filling process is monitored by the Industrial Edge system. This example reads
 - Warning: High gas consumption
 - Alert: Error within production
 
-In case of these events, notifications are generated and send to a mobile device (iOS) with installed Notifier app.
+In case of these events, notifications are generated and send to a mobile device with installed Notifier app.
 
 ## Requirements
 
