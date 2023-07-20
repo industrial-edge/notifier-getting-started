@@ -161,7 +161,7 @@ Activate the "Email" option and save.
 
 ## Connect smart devices
 
-It is also possible to receive notifications from the IED on a smart device. Therefore the SIMATIC Notifier mobile app must be installed on the smart device. The mobile app supports iOS and Androis devices (smartphones/tablets) as well as Wear OS devices (smartwatch). The app can be downloaded from the dedicated app stores.
+It is also possible to receive notifications from the IED on a smart device. Therefore the SIMATIC Notifier mobile app must be installed on the smart device. The mobile app supports iOS and Android devices (smartphones/tablets) as well as Wear OS devices (smartwatch). The app can be downloaded from the dedicated app stores.
 
 To be able to receive push notifications from the Notifier, you need to set up a connection from your smart device to the IED. Please consider the following preconditions:
 
