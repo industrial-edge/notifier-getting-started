@@ -1,104 +1,193 @@
 # Configuration
 
 - [Configuration](#configuration)
-  - [Configure PLC project](#configure-plc-project)
   - [Configure PLC Connection](#configure-plc-connection)
-  - [Configure Performance Insight](#configure-performance-insight)
+    - [Databus](#databus)
+    - [OPC UA Connector](#opc-ua-connector)
+  - [Configure Data Service](#configure-data-service)
   - [Configure Notifier](#configure-notifier)
-  - [Configure Notifier iOS](#configure-notifier-ios)
-
-## Configure PLC project
-
-1) Open TIA portal and open the project containing the filling application
-2) Download the PLC program to the PLC and set the PLC into RUN
-3) Open the HMI to control the filling application
+    - [Create notification rules](#create-notification-rules)
+    - [Manage "My notifications"](#manage-my-notifications)
+    - [Show user list](#show-user-list)
+    - [Show user groups](#show-user-groups)
+    - [Send notification via email](#send-notification-via-email)
+  - [Connect smart devices](#connect-smart-devices)
+    - [Setup Notifier mobile app](#setup-notifier-mobile-app)
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
-The S7 Connector sends the data to the Databus, where the Data Service app can collect what is needed for the notification rules.
-In order to build this infrastructure, these apps must be configured properly:
+To read data from the PLC and provide the data, we will use the OPC UA Connector to establish a connection with the PLC via OPC UA. The Connector transfers the data to the Databus.
 
-- IE Databus
-- S7 Connector
-- Data Service
+In order to build this infrastructure, these apps must be running and configured properly:
 
-Please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
+- Databus
+- OPC UA Connector
 
-Finally the configurations should look like this:
+### Databus
 
-**IE Databus**
+Go to the IEM App and open the Databus Configurator.
 
-![1](graphics/1_Databus.PNG)
+Create an user and add a suitable topic to receive the data from the connector and deploy the configuration.
 
-**S7 Connector**
+![1](/docs/graphics/1_Databus.PNG)
 
-![2](graphics/2_S7_Connector.PNG)
+### OPC UA Connector
 
-**Data Service**
+Go to the IEM App and open the OPC UA Connector Configurator.
 
-![3](graphics/3_DataService.PNG)
+Add your PLC as data source, add your requested tags and deploy the configuration.
 
-## Configure Performance Insight
+![2](/docs/graphics/2_Connector.PNG)
 
-In order to create a KPI and assign appropriate variables, we need to use the Performance Insight app.
-Limit values and activate notifications can be configured here, which will be forwarded to the Notifier.
+## Configure Data Service
 
-Open the user interface of the Performance Insight app on your IE Device. On the left bar navigate to Configuration > KPI types and click "New KPI type".
-Create a new KPI "production quality" with the following formula (`<faulty>` and `<produced>` are operands)
+The Data Service can be enabled to receive the PLC data, that was transferred by the connector. The user can configure all needed parameters structured by assets. These assets are then accessible within the Notifier.
 
-`100 - (<faulty> / <produced> * 100%)`
+For detailled instructions please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
 
-![4_1](graphics/4_1_PerformanceInsight.png)
+To make your PLC tags available for the Notifier, add these to a Data Service asset. Finally the Data Service configurations should look like this:
 
-Navigate to My Plant > filling application > Parameter (drop down menu on the top of the heading).
-
-![4_2](graphics/4_2_PerformanceInsight.png)
-
-Choose 'New KPI instance' to create a new instance according to the following settings:
-
-![4_3](graphics/4_3_PerformanceInsight.png)
-
-Select the tab 'Limits' to enter the low limit for the KPI value and activate the notification option:
-
-![4_4](graphics/4_4_PerformanceInsight.png)
-
-Now a new KPI instance should be available:
-
-![4_5](graphics/4_5_PerformanceInsight.png)
+![3](/docs/graphics/3_DataService.PNG)
 
 ## Configure Notifier
 
-In the chapter above we already created an alert notification for the KPI "production quality".
-In order to create some warning and information notifications, we now use the Notifier app.
+### Create notification rules
 
-Open the user interface of the Notifier app on your IE Device. On the left bar navigate to Settings > Manage notification rules and click "Add notification rule".
-Create a new warning notification "tank empty" with the following settings:
+The asset structure, including all parameters that were created above, is now available within the Notifier. That allows the user to create the following notification rules based on these parameters:
 
-![5_1](graphics/5_1_Notifier.PNG)
+- Information: Production was stopped
+- Warning: High gas consumption
+- Alert: Error within production
 
-Create a further information notification "production started" with the following settings:
+**Create an ***information*** rule**
 
-![5_2](graphics/5_2_Notifier.PNG)
+Go to the IED Web UI and launch the Notifier.
 
-## Configure Notifier iOS
+Navigate to Settings > Manage notification rules on the left bar.
 
-Open the Notifier iOS app and click "Add connection" to select a connection.
+Below the asset tree, select the dedicated asset for the notification rule.
 
-![5_3](graphics/Notifier_iOS_add_connection.PNG)
+Click "Add notification rule" to create the first rule "Production was stopped" as an information.
 
-Select "Edge" as the connection.
+Configure the following settings and save.
 
-![5_4](graphics/Notifier_iOS_choose_connection.PNG)
+![5_1](/docs/graphics/5_1_Notifier.PNG)
 
-Enter the login data from your Edge and click "Login" to confirm the data.
+**Create a ***warning*** rule**
 
-![5_5](graphics/Notifier_iOS_add_connection_login_data.PNG)
+Click "Add notification rule" to create the second rule "High gas consumption" as a warning.
 
-Activate the heartbeat to get a sound if there is a connection to the server.
+Configure the following settings and save.
 
-![5_7](graphics/Notifier_iOS_use_heartbeat.PNG)
+![5_2](/docs/graphics/5_2_Notifier.PNG)
 
-Under "Notifications" you can see the incoming warnings and information according to the rules you have created in the Edge Notifier app. The notifications can also be acknowledged in this view.
+**Create an ***alert*** rule**
 
-![5_6](graphics/Notifier_iOS_overview_warning.PNG)
+Click "Add notification rule" to create the third rule "Error within production" as an allert.
+
+Configure the following settings and save.
+
+![5_3](/docs/graphics/5_3_Notifier.PNG)
+
+Finally the configuration should look like this:
+
+![5_Notifier_Overview](/docs/graphics/5_Notifier_Overview.PNG)
+
+### Manage "My notifications"
+
+Navigate to Settings > Manage "My notifications" on the left bar.
+
+Here you can create filters for displaying only your notifications, which can be selected on the "Notifications" start page.
+
+> Hint: For showing notifications on a **smart device**, these filters must be configured necessarily for a user. Otherwise no notifications are send to the smart device!
+
+The filter conditions can be related to the notification type (information/wargning/alert) or the asset.
+
+For displaying all notifications, the configuration could look like this:
+
+![6_My_Notifications](/docs/graphics/6_My_Notifications.PNG)
+
+### Show user list
+
+Navigate to Settings > User list on the left bar.
+
+Here the administrator gets an overview of currently registered users within the Notifier app. The administrator is able to edit and delete an user account.
+
+In general users are managed on the Edge Device. In the screen "My User Groups", you can enable access to the Notifier app which is installed on the Edge Device. To do this, you create groups with different authorizations and provide dedicated users access to the Notifier.
+
+![6_User_List](/docs/graphics/6_User_List.PNG)
+
+### Show user groups
+
+Navigate to Settings > User groups on the left bar.
+
+Here the administrator gets a list of user groups within the Notifier app. The administrator is able to create a new group to send notifications to a group of users.
+
+The way of notification can be configured as push notification or email. Additionally you can configure a time that may pass before an escalation is triggered and the next user is notified.
+
+If a group contains several users, these are notified in the specified order. If one user can not accept the notification within the configured time, the notification is forwarded to the next one.
+
+![6_User_Roles_2](/docs/graphics/6_User_Roles_2.PNG)
+
+![6_User_Roles_3](/docs/graphics/6_User_Roles_3.PNG)
+
+### Send notification via email
+
+You can also send the notifications displayed under "My notifications" by email. 
+
+To do so, you must first configure the SMTP settings and then enable the "Email" option in the filter settings.
+
+**Configure SMTP settings**
+
+Navigate to Settings > Configure SMTP settings on the left bar.
+
+Enter the server details and choose an option for authentication.
+
+![6_SMTP_1](/docs/graphics/6_SMTP_1.PNG)
+
+To test the configuration, click "Validate configuration" and a dedicated window opens. Click "Send Email" to receive a test email to the address configured in the "To" field.
+
+![6_SMTP_2](/docs/graphics/6_SMTP_2.PNG)
+
+![6_SMTP_4](/docs/graphics/6_SMTP_4.PNG)
+
+**Enable email option**
+
+Navigate to Settings > Manage "My notifications" on the left bar.
+
+Add at least one filter for displaying your notifications.
+
+Activate the "Email" option and save.
+
+## Connect smart devices
+
+It is also possible to receive notifications from the IED on a smart device. Therefore the SIMATIC Notifier app must be installed on the smart device. The app supports iOS and Android devices (smartphones/tablets) as well as Wear OS devices (smartwatch). The app can be downloaded from the dedicated app stores.
+
+To be able to receive push notifications from the Notifier, you need to set up a connection from your smart device to the IED. Please consider the following preconditions:
+
+- the Notifier app is installed and running on the IED
+- the Notifier app is installed on your smart device
+- both devices are connected to the same network (WLAN)
+- communication ports are opened (443, 51883)
+
+### Setup Notifier mobile app
+
+Here we use an iPhone with iOS operating system, the Notifier app was downloaded from the Apple app store and installed on the smartphone.
+
+Open the Notifier app on your smart device. 
+
+Click "Add connection" and select "Edge" as connection type.
+
+![7_iOS_1](/docs/graphics/7_iOS_1.png)    ![7_iOS_2](/docs/graphics/7_iOS_2.png)
+
+Enter the login data from your Edge Device and click "Login".
+
+![7_iOS_3](/docs/graphics/7_iOS_3.png)
+
+After successful login, activate the heartbeat settings. This prevents a disconnection from the server when the app is minimized. On Android smart devices this function is called "Keep connection". Afterwards enable push notifications to receive incoming notifications at all times.
+
+![7_iOS_4](/docs/graphics/7_iOS_4.png)    ![7_iOS_5](/docs/graphics/7_iOS_5.png)
+
+Now the smart device is ready to receive notifications from the dedicated IED.
+
+Please switch to the [Usage](/README.md#usage) chapter, to see how to work with the Notifier and it's dedicated mobile app.
