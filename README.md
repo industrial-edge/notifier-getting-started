@@ -51,25 +51,25 @@ In case of these events, notifications are generated and send to a smart device 
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Installed System Configurators for Databus and OPC UA Connector
-- Installed System Apps Databus and OPC UA Connector
-- Installed Apps Data Service and Notifier
+- opt. Installed Common Configurator
+- Installed Databus, OPC UA Connector and Notifier
 - Edge device is connected to PLC
 - TIA portal project loaded on PLC
 - HTML5-capable Internet browser (in general it is advised to use Chrome, for Linux based systems it is recommended to use Firefox)
 
 ### Used components
 
-- Industrial Edge Management OS V1.5.2-4
+- Industrial Edge Management
   - IE Databus Configurator V2.1.0-3
-  - Common Connector Configurator V1.8.2-3
-- Industrial Edge Management App V1.12.10
-  - OPC UA Connector V1.8.1-6
-  - IE Databus V2.1.0-4
-  - Data Service V1.7.0
-  - Notifier V1.15.0
-- Industrial Edge Device V1.8.0-6
-- SIMATIC Notifier app for iOS V1.0.5
+  - Common Configurator V1.0.0
+- Industrial Edge Management App V1.14.9
+  - OPC UA Connector V2.4.2
+  - IE Databus V3.2.1
+  - IIH Essentials V2.2.1
+  - Notifier V1.21.0
+  - opt. Common Configurator 2.2.1
+- Industrial Edge Device V3.0.0-51
+- SIMATIC Notifier app for iOS/Android V1.1.0
 
 ### TIA Project
 
