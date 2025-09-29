@@ -31,21 +31,42 @@ Create an user and add a suitable topic to receive the data from the connector a
 
 ![1](/docs/graphics/1_Databus.PNG)
 
+### Databus for Common Configurator
+Go to the Common Configurator either on the IEM or on the IED and open Settings/Databus Credentials (left side) and fill the same credentials as in the previous section.
+
+![1_1](/docs/graphics/1_1Databus_Common_Configurator.PNG)
+
 ### OPC UA Connector
 
-Go to the IEM App and open the OPC UA Connector Configurator.
+Switch to Connector Configuration in the Common Configurator (left side) and use the OPC UA Connector to add a OPC UA Connection it.
+Add your PLC Data Source (Random Name, OPC UA Server URL from you PLC...)
 
-Add your PLC as data source, add your requested tags and deploy the configuration.
+Add your PLC as data source, browse all tags. For this tutorial only the following tags are needed:
+* Root.Objects.PLC.DataBlocksGlobal.GDB.signals.energySignals.gasConsumptionHeatingTank
+* Root.Objects.PLC.DataBlocksGlobal.GDB.operate.machineState
+
+The workflow is the following:
+1. selected the required tags with the checkbox
+2. set Acquistion cycle, Acquisition mode and Access mode
+3. Save for import
+4. Import Now the tags with the Deploy button
+
+The OPC UA Connector should look like on the following image
 
 ![2](/docs/graphics/2_Connector.PNG)
 
-## Configure Data Service
+## Configure IIH Essential
 
-The Data Service can be enabled to receive the PLC data, that was transferred by the connector. The user can configure all needed parameters structured by assets. These assets are then accessible within the Notifier.
+The IIH Essential can be enabled to receive the PLC data, that was transferred by the connector. The user can configure all needed parameters structured by assets. These assets are then accessible within the Notifier.
 
 For detailled instructions please refer to [using the Data Service](https://github.com/industrial-edge/data-service).
 
-To make your PLC tags available for the Notifier, add these to a Data Service asset. Finally the Data Service configurations should look like this:
+To make your PLC tags available for the Notifier, add the required tags to an IIH Essential Asset.
+
+First check if IIH Essentials recognises the OPC UA Connector on section connectors (left side), shown in the next image.
+![3_1](/docs/graphics/3_1_IIH_Connectors.PNG)
+
+Finally ad the tags as an Attribute in the IIH Essentials 
 
 ![3](/docs/graphics/3_DataService.PNG)
 
