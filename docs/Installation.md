@@ -44,6 +44,7 @@ Add your PLC Data Source (Random Name, OPC UA Server URL from you PLC...)
 Add your PLC as data source, browse all tags. For this tutorial only the following tags are needed:
 * Root.Objects.PLC.DataBlocksGlobal.GDB.signals.energySignals.gasConsumptionHeatingTank
 * Root.Objects.PLC.DataBlocksGlobal.GDB.operate.machineState
+
 The workflow is the following:
 1. selected the required tags with the checkbox
 2. set Acquistion cycle, Acquisition mode and Access mode
