@@ -49,8 +49,9 @@ The workflow is the following:
 1. selected the required tags with the checkbox
 2. set Acquistion cycle, Acquisition mode and Access mode
 3. Save for import
-4. Import
-Now the tags of the OPC UA Connector should look like the following image
+4. Import Now the tags with the Deploy button
+
+The OPC UA Connector should look like on the following image
 
 ![2](/docs/graphics/2_Connector.PNG)
 
